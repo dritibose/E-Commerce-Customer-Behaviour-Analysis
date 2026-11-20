@@ -61,3 +61,10 @@ cancellation_rate=(cancelled_count[0]/total_orders[0])*100
 
 
 print("Cancellation Rate: ", cancellation_rate, "%\n")
+
+
+#Return Rate
+Returning_orders=df[df["Order_Status"]=="Returned"].shape[0]
+total_customers=df.shape
+return_rate=(Returning_orders/total_customers[0])*100
+print("Return Rate: ", return_rate,"%\n")
