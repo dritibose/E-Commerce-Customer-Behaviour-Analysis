@@ -1,0 +1,67 @@
+Total Orders:  50 
+
+NUmber of completed orders:  40 
+
+
+ Total Revenue:  338370 
+
+Revenue by Category: 
+Category
+Beauty          14790
+Electronics    240489
+Fashion         28691
+Home            54400
+Name: Order_Value, dtype: int64 
+
+Highest selling Category:  Electronics 
+
+Highest selling City  Chennai 
+
+Sales by city: 
+ City
+Chennai    92793
+Delhi      53695
+Kolkata    40695
+Mumbai     75492
+Pune       75695
+Name: Order_Value, dtype: int64 
+
+Order by cities:  City
+Chennai    12
+Delhi      11
+Kolkata     8
+Mumbai     10
+Pune        9
+Name: Order_ID, dtype: int64 
+
+Average order value:  8459.25 
+
+Customer_Group
+New          9377.785714
+Returning    6316.000000
+Name: Order_Value, dtype: float64 
+
+NUmber of repeating customers:  3 
+
+Number of cancelled orders:      Order_ID  Customer_ID     Category     City  Order_Value Order_Status  Delivery_Days  Rating Customer_Group
+3       2004          603  Electronics     Pune        31999    Cancelled            NaN     NaN            New
+11      2012          609         Home   Mumbai         7800    Cancelled            NaN     NaN            New
+21      2022          616      Fashion     Pune         2199    Cancelled            NaN     NaN            New
+29      2030          622  Electronics  Kolkata        23999    Cancelled            NaN     NaN            New
+39      2040          630         Home    Delhi         4800    Cancelled            NaN     NaN            New 
+
+Cancellation Rate:  10.0 %
+
+Return Rate:  10.0 %
+
+Average rating accross the categories: 
+ Category
+Beauty         4.090909
+Electronics    4.000000
+Fashion        3.750000
+Home           3.300000
+Name: Rating, dtype: float64
+
+ Highest rating in category:  Beauty 
+
+Average Delivery Days:  3.875 
