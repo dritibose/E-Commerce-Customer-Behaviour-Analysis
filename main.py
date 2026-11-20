@@ -40,3 +40,15 @@ print("Order by cities: " ,city_order,"\n")
 #Average Order Value
 average_order_value=completed_orders["Order_Value"].mean()
 print("Average order value: ", average_order_value,"\n")
+
+
+#NEW PEOPLE SPENDIND VS RETURNING PEOLPE SPENDING
+group_spending=completed_orders.groupby("Customer_Group")["Order_Value"].mean()
+print(group_spending,"\n")
+
+
+repeating_customers=df[df["Customer_Group"]=="Returning"]["Customer_ID"].nunique()
+print("NUmber of repeating customers: ", repeating_customers,"\n")
+
+cancelled_orders=df[df["Order_Status"]=="Cancelled"]
+print("Number of cancelled orders: ", cancelled_orders,"\n")
