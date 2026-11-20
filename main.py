@@ -35,3 +35,8 @@ print("Sales by city: \n", City_sales,"\n")
 
 city_order=df.groupby("City")["Order_ID"].count()
 print("Order by cities: " ,city_order,"\n")
+
+
+#Average Order Value
+average_order_value=completed_orders["Order_Value"].mean()
+print("Average order value: ", average_order_value,"\n")
