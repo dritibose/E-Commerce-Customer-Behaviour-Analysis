@@ -75,3 +75,8 @@ cat_rating=df.groupby("Category")["Rating"].mean()
 print("Average rating accross the categories: \n", cat_rating)
 
 print("\n","Highest rating in category: ", cat_rating.idxmax(),"\n")
+
+
+#Average delivery time
+avg_delivery=completed_orders["Delivery_Days"].mean()
+print("Average Delivery Days: ", avg_delivery,"\n")
