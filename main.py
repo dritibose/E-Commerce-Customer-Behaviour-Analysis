@@ -68,3 +68,10 @@ Returning_orders=df[df["Order_Status"]=="Returned"].shape[0]
 total_customers=df.shape
 return_rate=(Returning_orders/total_customers[0])*100
 print("Return Rate: ", return_rate,"%\n")
+
+
+#category wise rating
+cat_rating=df.groupby("Category")["Rating"].mean()
+print("Average rating accross the categories: \n", cat_rating)
+
+print("\n","Highest rating in category: ", cat_rating.idxmax(),"\n")
