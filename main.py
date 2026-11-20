@@ -52,3 +52,12 @@ print("NUmber of repeating customers: ", repeating_customers,"\n")
 
 cancelled_orders=df[df["Order_Status"]=="Cancelled"]
 print("Number of cancelled orders: ", cancelled_orders,"\n")
+
+
+#Cancellation rate
+cancelled_count=cancelled_orders.shape
+total_orders=df.shape
+cancellation_rate=(cancelled_count[0]/total_orders[0])*100
+
+
+print("Cancellation Rate: ", cancellation_rate, "%\n")
