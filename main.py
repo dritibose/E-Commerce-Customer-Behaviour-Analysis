@@ -17,3 +17,7 @@ print("NUmber of completed orders: ", completed_orders.shape[0],"\n")
 Total_revenue=completed_orders["Order_Value"].sum()
 print("\n","Total Revenue: ", Total_revenue,"\n")
 
+#Category Analysis
+category_revenue=completed_orders.groupby("Category")["Order_Value"].sum()
+print("Revenue by Category: ")
+print(category_revenue,"\n")
