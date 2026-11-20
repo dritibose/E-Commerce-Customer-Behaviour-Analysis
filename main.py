@@ -21,3 +21,17 @@ print("\n","Total Revenue: ", Total_revenue,"\n")
 category_revenue=completed_orders.groupby("Category")["Order_Value"].sum()
 print("Revenue by Category: ")
 print(category_revenue,"\n")
+
+
+#City and Orders
+print("Highest selling Category: ", category_revenue.idxmax(),"\n")
+
+#city Analysis
+City_sales=completed_orders.groupby("City")["Order_Value"].sum()
+
+
+print("Highest selling City ", City_sales.idxmax(),"\n")
+print("Sales by city: \n", City_sales,"\n")
+
+city_order=df.groupby("City")["Order_ID"].count()
+print("Order by cities: " ,city_order,"\n")
