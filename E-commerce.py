@@ -101,3 +101,22 @@ print("\n","Highest rating in category: ", cat_rating.idxmax(),"\n")
 #Average delivery time
 avg_delivery=completed_orders["Delivery_Days"].mean()
 print("Average Delivery Days: ", avg_delivery,"\n")
+
+
+#Correlation
+
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+# Calculate correlation
+correlation = df["Delivery_Days"].corr(df["Rating"])
+
+print("Correlation:", correlation)
+
+# Scatter plot
+plt.scatter(df["Delivery_Days"], df["Rating"])
+
+plt.xlabel("Delivery Days")
+plt.ylabel("Customer Rating")
+plt.title("Delivery Days vs Customer Rating")
