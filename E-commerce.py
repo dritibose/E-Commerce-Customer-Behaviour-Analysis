@@ -13,7 +13,8 @@ cleaned_df=df.dropna()
 
 
 print(df["Category"].unique())
-df=df["Category"]=df[]
+df["Category"]=df["Category"].str.strip()
+df=df["Category"]
 # #Total orders
 # total_orders=df.shape
 # print("Total Orders: ", total_orders[0],"\n")
