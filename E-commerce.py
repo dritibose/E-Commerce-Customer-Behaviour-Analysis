@@ -14,7 +14,16 @@ cleaned_df=df.dropna()
 
 print(df["Category"].unique())
 df["Category"]=df["Category"].str.strip()
-df=df["Category"]
+df["Category"]=df["Category"].str.title()
+
+
+df["Customer_group"]=df["Customer_group"].str.strip()
+df["Customer_group"]=df["Customer_group"].str.title()
+
+
+df["City"]=df["City"].str.strip()
+df["City"]=df["City"].str.title()
+
 # #Total orders
 # total_orders=df.shape
 # print("Total Orders: ", total_orders[0],"\n")
