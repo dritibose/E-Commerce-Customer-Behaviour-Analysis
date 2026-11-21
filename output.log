@@ -1,67 +1,84 @@
-Total Orders:  50 
+Duplicate rows:  9
+<StringArray>
+[  'Electronics',       'Fashion',          'Home',     ' fashion ',
+       'Grocery', ' electronics ',          'HOME',        'Beauty',
+       'FASHION',         'home ',      ' beauty ',       'grocery',
+      ' fashion',          'home',       'GROCERY',   'electronics',
+        'BEAUTY',        ' home ',       ' beauty',       'fashion',
+  ' electronics',      ' BEAUTY ']
+Length: 22, dtype: str
+Total Orders:  76 
 
-NUmber of completed orders:  40 
+NUmber of completed orders:  59 
 
 
- Total Revenue:  338370 
+ Total Revenue:  377839 
 
 Revenue by Category: 
 Category
-Beauty          14790
-Electronics    240489
-Fashion         28691
-Home            54400
+Beauty          14750
+Electronics    254990
+Fashion         32799
+Grocery          9800
+Home            65500
 Name: Order_Value, dtype: int64 
 
 Highest selling Category:  Electronics 
 
-Highest selling City  Chennai 
+Highest selling City  Delhi 
 
 Sales by city: 
  City
-Chennai    92793
-Delhi      53695
-Kolkata    40695
-Mumbai     75492
-Pune       75695
+Chennai      54048
+Delhi        74198
+Hyderabad    67098
+Jaipur       34599
+Kolkata      49549
+Lucknow      36749
+Mumbai       45698
+Pune         15900
 Name: Order_Value, dtype: int64 
 
 Order by cities:  City
-Chennai    12
-Delhi      11
-Kolkata     8
-Mumbai     10
-Pune        9
+Chennai       9
+Delhi        11
+Hyderabad    10
+Jaipur        9
+Kolkata       9
+Lucknow       9
+Mumbai       10
+Pune          9
 Name: Order_ID, dtype: int64 
 
-Average order value:  8459.25 
+Average order value:  6404.050847457627 
 
 Customer_Group
-New          9377.785714
-Returning    6316.000000
+New          5473.965517
+Returning    7303.133333
 Name: Order_Value, dtype: float64 
 
-NUmber of repeating customers:  3 
+NUmber of repeating customers:  38 
 
-Number of cancelled orders:      Order_ID  Customer_ID     Category     City  Order_Value Order_Status  Delivery_Days  Rating Customer_Group
-3       2004          603  Electronics     Pune        31999    Cancelled            NaN     NaN            New
-11      2012          609         Home   Mumbai         7800    Cancelled            NaN     NaN            New
-21      2022          616      Fashion     Pune         2199    Cancelled            NaN     NaN            New
-29      2030          622  Electronics  Kolkata        23999    Cancelled            NaN     NaN            New
-39      2040          630         Home    Delhi         4800    Cancelled            NaN     NaN            New 
+Number of cancelled orders:      Order_ID  Customer_ID     Category       City  Order_Value Order_Status  Delivery_Days  Rating Customer_Group
+3       2004          603  Electronics       Pune        31999    Cancelled            NaN     NaN            New
+15      2016          615      Fashion    Lucknow         2100    Cancelled            NaN     NaN            New
+22      2023          622      Grocery  Hyderabad         1100    Cancelled            NaN     NaN      Returning
+35      2036          635  Electronics       Pune        12999    Cancelled            NaN     NaN            New
+54      2055          654      Fashion  Hyderabad         3100    Cancelled            NaN     NaN      Returning 
 
-Cancellation Rate:  10.0 %
+Cancellation Rate:  6.578947368421052 %
 
-Return Rate:  10.0 %
+Return Rate:  0.0 %
 
 Average rating accross the categories: 
  Category
-Beauty         4.090909
-Electronics    4.000000
-Fashion        3.750000
-Home           3.300000
+Beauty         3.866667
+Electronics    4.285714
+Fashion        4.071429
+Grocery        4.615385
+Home           4.000000
 Name: Rating, dtype: float64
 
- Highest rating in category:  Beauty 
+ Highest rating in category:  Grocery 
 
-Average Delivery Days:  3.875 
+Average Delivery Days:  3.3389830508474576 

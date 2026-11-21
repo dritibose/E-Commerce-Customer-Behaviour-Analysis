@@ -17,8 +17,8 @@ df["Category"]=df["Category"].str.strip()
 df["Category"]=df["Category"].str.title()
 
 
-df["Customer_group"]=df["Customer_group"].str.strip()
-df["Customer_group"]=df["Customer_group"].str.title()
+df["Customer_Group"]=df["Customer_Group"].str.strip()
+df["Customer_Group"]=df["Customer_Group"].str.title()
 
 
 df["City"]=df["City"].str.strip()
