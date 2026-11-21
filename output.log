@@ -82,3 +82,5 @@ Name: Rating, dtype: float64
  Highest rating in category:  Grocery 
 
 Average Delivery Days:  3.3389830508474576 
+
+Correlation: -0.7417180421058304

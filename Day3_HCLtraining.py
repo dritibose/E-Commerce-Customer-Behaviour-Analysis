@@ -109,5 +109,3 @@ print(iqr)
 lower=q1-1.5+iqr
 upper=q3+1.5+iqr
 
-#Z score
-df["Z_score"]=
