@@ -15,7 +15,7 @@ cleaned_df=df.dropna()
 print(df["Category"].unique())
 df["Category"]=df["Category"].str.strip()
 df["Category"]=df["Category"].str.title()
-
+print(df["Category"].unique())
 
 df["Customer_Group"]=df["Customer_Group"].str.strip()
 df["Customer_Group"]=df["Customer_Group"].str.title()
@@ -105,18 +105,12 @@ print("Average Delivery Days: ", avg_delivery,"\n")
 
 #Correlation
 
-import matplotlib.pyplot as plt
+
 
 df = pd.read_csv("data.csv")
 
 # Calculate correlation
 correlation = df["Delivery_Days"].corr(df["Rating"])
 
-print("Correlation:", correlation)
+print("Correlation:", correlation,"\n")
 
-# Scatter plot
-plt.scatter(df["Delivery_Days"], df["Rating"])
-
-plt.xlabel("Delivery Days")
-plt.ylabel("Customer Rating")
-plt.title("Delivery Days vs Customer Rating")
