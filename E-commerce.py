@@ -11,6 +11,7 @@ df=df.drop_duplicates()
 df.isna().sum()
 df[df.isna().any(axis=1)]
 cleaned_df=df.dropna()
+df=cleaned_df
 
 #Handling Captalization
 print(df["Category"].unique())
@@ -72,6 +73,27 @@ print(group_spending,"\n")
 repeating_customers=df[df["Customer_Group"]=="Returning"]["Customer_ID"].nunique()
 print("NUmber of repeating customers: ", repeating_customers,"\n")
 
+# Repeat Purchase Analysis
+
+customer_orders = df.groupby("Customer_ID")["Order_ID"].count()
+
+# Customers having more than one order
+repeat_customers = customer_orders[customer_orders > 1]
+
+# Total unique customers
+total_customers = df["Customer_ID"].nunique()
+
+# Number of repeat customers
+repeat_customer_count = repeat_customers.shape[0]
+
+# Repeat customer rate
+repeat_customer_rate = (repeat_customer_count / total_customers) * 100
+
+print("Total unique customers:", total_customers)
+print("Repeat customers:", repeat_customer_count)
+print("Repeat customer rate:", repeat_customer_rate, "%")
+
+
 cancelled_orders=df[df["Order_Status"]=="Cancelled"]
 # print("Number of cancelled orders: ", cancelled_orders,"\n")
 
@@ -98,12 +120,23 @@ print("Pending Rate: ", Pending_rate, "%\n")
 
 
 
-#Return Rate
+#Return customer rate
 Returning_customers=df[df["Customer_Group"]=="Returning"].shape[0]
 total_customers=df.shape
 return_rate=(Returning_customers/total_customers[0])*100
-print("Return Rate: ", return_rate,"%\n")
+print("Return Customer Rate: ", return_rate,"%\n")
 
+# Return Rate
+
+returned_orders = df[df["Order_Status"] == "Returned"]
+
+returned_count = returned_orders.shape[0]
+total_order_count = df.shape[0]
+
+return_rate = (returned_count / total_order_count) * 100
+
+print("Returned Orders:", returned_count)
+print("Return Rate:", round(return_rate, 2), "%")
 
 #category wise rating
 cat_rating=df.groupby("Category")["Rating"].mean()
@@ -124,3 +157,13 @@ correlation = df["Delivery_Days"].corr(df["Rating"])
 
 print("Correlation:", correlation,"\n")
 
+# Correlation Interpretation
+
+if correlation > 0:
+    print("Positive correlation: ratings tend to increase as delivery days increase.")
+
+elif correlation < 0:
+    print("Negative correlation: ratings tend to decrease as delivery days increase.")
+
+else:
+    print("No linear correlation between delivery days and ratings.")
