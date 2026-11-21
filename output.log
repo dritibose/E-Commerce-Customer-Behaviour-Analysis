@@ -7,6 +7,9 @@ Duplicate rows:  9
         'BEAUTY',        ' home ',       ' beauty',       'fashion',
   ' electronics',      ' BEAUTY ']
 Length: 22, dtype: str
+<StringArray>
+['Electronics', 'Fashion', 'Home', 'Grocery', 'Beauty']
+Length: 5, dtype: str
 Total Orders:  76 
 
 NUmber of completed orders:  59 
@@ -59,16 +62,11 @@ Name: Order_Value, dtype: float64
 
 NUmber of repeating customers:  38 
 
-Number of cancelled orders:      Order_ID  Customer_ID     Category       City  Order_Value Order_Status  Delivery_Days  Rating Customer_Group
-3       2004          603  Electronics       Pune        31999    Cancelled            NaN     NaN            New
-15      2016          615      Fashion    Lucknow         2100    Cancelled            NaN     NaN            New
-22      2023          622      Grocery  Hyderabad         1100    Cancelled            NaN     NaN      Returning
-35      2036          635  Electronics       Pune        12999    Cancelled            NaN     NaN            New
-54      2055          654      Fashion  Hyderabad         3100    Cancelled            NaN     NaN      Returning 
-
 Cancellation Rate:  6.578947368421052 %
 
-Return Rate:  0.0 %
+Pending Rate:  15.789473684210526 %
+
+Return Rate:  50.0 %
 
 Average rating accross the categories: 
  Category
@@ -83,4 +81,4 @@ Name: Rating, dtype: float64
 
 Average Delivery Days:  3.3389830508474576 
 
-Correlation: -0.7417180421058304
+Correlation: -0.7504486981160438 

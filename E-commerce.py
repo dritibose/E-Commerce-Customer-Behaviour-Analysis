@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_csv("data.csv")
+df=pd.read_csv("dataset.csv")
 
 
 #Duplicates
@@ -72,7 +72,7 @@ repeating_customers=df[df["Customer_Group"]=="Returning"]["Customer_ID"].nunique
 print("NUmber of repeating customers: ", repeating_customers,"\n")
 
 cancelled_orders=df[df["Order_Status"]=="Cancelled"]
-print("Number of cancelled orders: ", cancelled_orders,"\n")
+# print("Number of cancelled orders: ", cancelled_orders,"\n")
 
 
 #Cancellation rate
@@ -83,11 +83,24 @@ cancellation_rate=(cancelled_count[0]/total_orders[0])*100
 
 print("Cancellation Rate: ", cancellation_rate, "%\n")
 
+#Pending percent
+
+pending_orders=df[df["Order_Status"]=="Pending"]
+# print("Number of pending orders: ", pending_orders,"\n")
+
+Pending_count=pending_orders.shape
+total_orders=df.shape
+Pending_rate=(Pending_count[0]/total_orders[0])*100
+
+
+print("Pending Rate: ", Pending_rate, "%\n")
+
+
 
 #Return Rate
-Returning_orders=df[df["Order_Status"]=="Returned"].shape[0]
+Returning_customers=df[df["Customer_Group"]=="Returning"].shape[0]
 total_customers=df.shape
-return_rate=(Returning_orders/total_customers[0])*100
+return_rate=(Returning_customers/total_customers[0])*100
 print("Return Rate: ", return_rate,"%\n")
 
 
@@ -104,10 +117,6 @@ print("Average Delivery Days: ", avg_delivery,"\n")
 
 
 #Correlation
-
-
-
-df = pd.read_csv("data.csv")
 
 # Calculate correlation
 correlation = df["Delivery_Days"].corr(df["Rating"])
