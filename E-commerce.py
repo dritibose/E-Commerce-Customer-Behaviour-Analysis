@@ -4,6 +4,7 @@ df=pd.read_csv("dataset.csv")
 
 #Duplicates
 r=df.duplicated().sum()
+print(r)
 print("Duplicate rows: ",r)
 df=df.drop_duplicates()
 
