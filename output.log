@@ -3,14 +3,14 @@ Duplicate rows:  9
 [  'Electronics',       'Fashion',          'Home',     ' fashion ',
        'Grocery', ' electronics ',          'HOME',        'Beauty',
        'FASHION',         'home ',      ' beauty ',       'grocery',
-      ' fashion',          'home',       'GROCERY',   'electronics',
-        'BEAUTY',        ' home ',       ' beauty',       'fashion',
+      ' fashion',          'home',   'electronics',        'BEAUTY',
+        ' home ',       ' beauty',       'fashion',       'GROCERY',
   ' electronics',      ' BEAUTY ']
 Length: 22, dtype: str
 <StringArray>
 ['Electronics', 'Fashion', 'Home', 'Grocery', 'Beauty']
 Length: 5, dtype: str
-Total Orders:  76 
+Total Orders:  71 
 
 NUmber of completed orders:  59 
 
@@ -45,12 +45,12 @@ Name: Order_Value, dtype: int64
 Order by cities:  City
 Chennai       9
 Delhi        11
-Hyderabad    10
+Hyderabad     8
 Jaipur        9
 Kolkata       9
-Lucknow       9
+Lucknow       8
 Mumbai       10
-Pune          9
+Pune          7
 Name: Order_ID, dtype: int64 
 
 Average order value:  6404.050847457627 
@@ -60,14 +60,19 @@ New          5473.965517
 Returning    7303.133333
 Name: Order_Value, dtype: float64 
 
-NUmber of repeating customers:  38 
+NUmber of repeating customers:  36 
 
-Cancellation Rate:  6.578947368421052 %
+Total unique customers: 69
+Repeat customers: 2
+Repeat customer rate: 2.898550724637681 %
+Cancellation Rate:  0.0 %
 
-Pending Rate:  15.789473684210526 %
+Pending Rate:  16.901408450704224 %
 
-Return Rate:  50.0 %
+Return Customer Rate:  50.70422535211267 %
 
+Returned Orders: 0
+Return Rate: 0.0 %
 Average rating accross the categories: 
  Category
 Beauty         3.866667
@@ -82,3 +87,5 @@ Name: Rating, dtype: float64
 Average Delivery Days:  3.3389830508474576 
 
 Correlation: -0.7504486981160438 
+
+Negative correlation: ratings tend to decrease as delivery days increase.
